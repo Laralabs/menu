@@ -1,8 +1,8 @@
 <?php
 
-use Laralabs\Menu\MenuPresenter;
-use Laralabs\Menu\Facades\Menu;
 use Laralabs\Menu\Exceptions\MenuPresenterFormatterNotFound;
+use Laralabs\Menu\Facades\Menu;
+use Laralabs\Menu\MenuPresenter;
 
 if (!function_exists('get_menu')) {
     function get_menu(string $format, ?string $name = null)
@@ -23,6 +23,6 @@ if (!function_exists('get_menu')) {
             return Menu::toBootstrap($name);
         }
 
-        throw new MenuPresenterFormatterNotFound('The format: ' . $format . ' is not a valid presenter format');
+        throw new MenuPresenterFormatterNotFound('The format: '.$format.' is not a valid presenter format');
     }
 }

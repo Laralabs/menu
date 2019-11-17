@@ -3,10 +3,9 @@
 namespace Laralabs\Menu\Tests;
 
 use Laralabs\Menu\Contracts\Group;
-use Laralabs\Menu\Contracts\Menu;
 use Laralabs\Menu\Contracts\MenuData;
 
-class MenuTest extends TestCase
+class MenuDataTest extends TestCase
 {
     /**
      * @var MenuData

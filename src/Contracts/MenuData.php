@@ -9,7 +9,7 @@ interface MenuData
 {
     public function group(string $name, ?Closure $callback = null): Group;
 
-    public function addGroup(Group $group): MenuData;
+    public function addGroup(Group $group): self;
 
     public function getGroups(): Collection;
 }

@@ -38,7 +38,7 @@ class MenuManager
     public function register(string $menu): self
     {
         if (class_exists($menu) === false) {
-            throw new MenuNotFoundException('Menu of the class (' . $menu . ') does not exist.');
+            throw new MenuNotFoundException('Menu of the class ('.$menu.') does not exist.');
         }
 
         $this->menus[] = $menu;

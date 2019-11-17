@@ -10,7 +10,7 @@ class MenuFakeWithAllExtenders extends Menu
     public $name = 'MenuFakeWithAllExtenders';
 
     /**
-     * Build your menu implementation here
+     * Build your menu implementation here.
      */
     public function build(): void
     {

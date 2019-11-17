@@ -15,7 +15,7 @@ abstract class Menu
     }
 
     /**
-     * Build your menu implementation here
+     * Build your menu implementation here.
      */
     abstract public function build(): void;
 

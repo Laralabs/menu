@@ -9,31 +9,31 @@ interface Item
 {
     public function getName(): string;
 
-    public function name(string $name): Item;
+    public function name(string $name): self;
 
-    public function order(int $order): Item;
+    public function order(int $order): self;
 
     public function getOrder(): int;
 
-    public function icon(string $icon): Item;
+    public function icon(string $icon): self;
 
     public function getIcon(): string;
 
-    public function toggleIcon(string $toggleIcon): Item;
+    public function toggleIcon(string $toggleIcon): self;
 
     public function getToggleIcon(): string;
 
-    public function url(string $url): Item;
+    public function url(string $url): self;
 
     public function getUrl(): string;
 
-    public function route(string $routeName, $params = []): Item;
+    public function route(string $routeName, $params = []): self;
 
     public function getItemClass(): string;
 
     public function subItem(string $itemName, Closure $callback = null): SubItem;
 
-    public function addSubItem(SubItem $subItem): Item;
+    public function addSubItem(SubItem $subItem): self;
 
     public function hasSubItems(): bool;
 

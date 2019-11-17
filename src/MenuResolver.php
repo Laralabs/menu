@@ -15,7 +15,7 @@ class MenuResolver implements Resolver
 
         if (!$menu instanceof Menu) {
             throw new MenuNotFoundException(
-                'Your menu must implement ' . Menu::class . ' interface, value given: ' . $class
+                'Your menu must implement '.Menu::class.' interface, value given: '.$class
             );
         }
 
