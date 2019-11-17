@@ -1,0 +1,53 @@
+{
+  "name": "laralabs/menu",
+  "description": "Menu package for Laravel, build it with classes, and render it how you want to from a collection/array/json.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Matt Clinton",
+      "email": "matt@laralabs.uk"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.1",
+    "illuminate/support": "^5.5|^6.0",
+    "illuminate/routing": "^5.5|^6.0"
+  },
+  "require-dev": {
+    "mockery/mockery": "^1.0",
+    "orchestra/testbench": "^3.4|^4.0",
+    "phpunit/phpunit": ">6.0",
+    "spatie/phpunit-snapshot-assertions": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Laralabs\\Menu\\": "src/"
+    },
+    "files": [
+      "src/Helpers/helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Laralabs\\Menu\\Tests\\": "tests/",
+      "Laralabs\\Menu\\Tests\\Fakes\\": "tests/fakes"
+    },
+    "files": [
+      "src/Helpers/helpers.php"
+    ]
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Laralabs\\Menu\\MenuServiceProvider"
+      ],
+      "aliases": {
+        "Menu": "Laralabs\\Menu\\Facades\\Menu"
+      }
+    }
+  }
+}

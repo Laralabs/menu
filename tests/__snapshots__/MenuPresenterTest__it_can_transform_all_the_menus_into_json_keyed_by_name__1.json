@@ -1,0 +1,78 @@
+{
+    "MenuFake": {
+        "groupOne": {
+            "name": "groupOne",
+            "order": 1,
+            "showName": true,
+            "items": {
+                "Group One, Item One": {
+                    "name": "Group One, Item One",
+                    "order": 0,
+                    "icon": "fas fa-angle-double-right",
+                    "toggleIcon": "fas fa-angle-down",
+                    "itemClass": "",
+                    "url": "",
+                    "subItems": []
+                }
+            }
+        }
+    },
+    "MenuFakeWithAllExtenders": {
+        "groupOne": {
+            "name": "groupOne",
+            "order": 0,
+            "showName": true,
+            "items": {
+                "Group One, Item One": {
+                    "name": "Group One, Item One",
+                    "order": 0,
+                    "icon": "fas fa-angle-double-right",
+                    "toggleIcon": "fas fa-angle-down",
+                    "itemClass": "",
+                    "url": "",
+                    "subItems": []
+                }
+            }
+        },
+        "groupTwo": {
+            "name": "groupTwo",
+            "order": 2,
+            "showName": true,
+            "items": {
+                "Group Two, Item One": {
+                    "name": "Group Two, Item One",
+                    "order": 0,
+                    "icon": "fas fa-angle-double-right",
+                    "toggleIcon": "fas fa-angle-down",
+                    "itemClass": "",
+                    "url": "",
+                    "subItems": []
+                }
+            }
+        },
+        "groupThree": {
+            "name": "groupThree",
+            "order": 3,
+            "showName": true,
+            "items": {
+                "Group Three, Item One": {
+                    "name": "Group Three, Item One",
+                    "order": 0,
+                    "icon": "fas fa-angle-double-right",
+                    "toggleIcon": "fas fa-angle-down",
+                    "itemClass": "",
+                    "url": "#",
+                    "subItems": {
+                        "Sub Item": {
+                            "name": "Sub Item",
+                            "order": 0,
+                            "icon": "fas fa-angle-double-right",
+                            "itemClass": "",
+                            "url": ""
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
