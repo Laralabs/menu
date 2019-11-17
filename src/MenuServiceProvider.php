@@ -66,7 +66,7 @@ class MenuServiceProvider extends ServiceProvider
 
     protected function registerViews(): void
     {
-        $location = __DIR__ . '/../resources/views';
+        $location = __DIR__.'/../resources/views';
 
         $this->loadViewsFrom($location, 'laralabs-menu');
 

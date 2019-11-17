@@ -79,10 +79,10 @@ class MenuPresenter
         }
 
         return View::make('laralabs-menu::bootstrap', [
-            'menu' => $this->toCollection($menu)->first(),
+            'menu'     => $this->toCollection($menu)->first(),
             'navClass' => $navClass,
-            'navRole' => $navRole,
-            'ulClass' => $ulClass,
+            'navRole'  => $navRole,
+            'ulClass'  => $ulClass,
         ])->render();
     }
 

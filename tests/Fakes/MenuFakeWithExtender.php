@@ -10,7 +10,7 @@ class MenuFakeWithExtender extends Menu
     public $name = 'MenuFakeWithExtender';
 
     /**
-     * Build your menu implementation here
+     * Build your menu implementation here.
      */
     public function build(): void
     {
@@ -29,7 +29,7 @@ class MenuFakeWithExtender extends Menu
     public function extenders(): array
     {
         return [
-            MenuExtenderFake::class
+            MenuExtenderFake::class,
         ];
     }
 }

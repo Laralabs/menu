@@ -4,7 +4,6 @@ namespace Laralabs\Menu\Exceptions;
 
 use Exception;
 
-class  MenuPresenterFormatterNotFound extends Exception
+class MenuPresenterFormatterNotFound extends Exception
 {
-
 }

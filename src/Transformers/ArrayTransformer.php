@@ -22,14 +22,14 @@ class ArrayTransformer implements Transformer
     {
         return [
             $group->getName() => [
-                'name' => $group->shouldShowGroupName() ? $group->getName() : null,
-                'order' => $group->getOrder(),
+                'name'     => $group->shouldShowGroupName() ? $group->getName() : null,
+                'order'    => $group->getOrder(),
                 'showName' => $group->shouldShowGroupName(),
-                'items' => $group->getItems()
+                'items'    => $group->getItems()
                     ->mapWithKeys(function (Item $item) {
                         return $this->transformItem($item);
                     })->toArray(),
-            ]
+            ],
         ];
     }
 
@@ -37,17 +37,17 @@ class ArrayTransformer implements Transformer
     {
         return [
             $item->getName() => [
-                'name' => $item->getName(),
-                'order' => $item->getOrder(),
-                'icon' => $item->getIcon(),
+                'name'       => $item->getName(),
+                'order'      => $item->getOrder(),
+                'icon'       => $item->getIcon(),
                 'toggleIcon' => $item->getToggleIcon(),
-                'itemClass' => $item->getItemClass(),
-                'url' => $item->getSubItems()->count() === 0 ? $item->getUrl() : '#',
-                'subItems' => $item->getSubItems()
+                'itemClass'  => $item->getItemClass(),
+                'url'        => $item->getSubItems()->count() === 0 ? $item->getUrl() : '#',
+                'subItems'   => $item->getSubItems()
                     ->mapWithKeys(function (SubItem $subItem) {
                         return $this->transformSubItem($subItem);
                     })->toArray(),
-            ]
+            ],
         ];
     }
 
@@ -55,12 +55,12 @@ class ArrayTransformer implements Transformer
     {
         return [
             $subItem->getName() => [
-                'name' => $subItem->getName(),
-                'order' => $subItem->getOrder(),
-                'icon' => $subItem->getIcon(),
+                'name'      => $subItem->getName(),
+                'order'     => $subItem->getOrder(),
+                'icon'      => $subItem->getIcon(),
                 'itemClass' => $subItem->getItemClass(),
-                'url' => $subItem->getUrl(),
-            ]
+                'url'       => $subItem->getUrl(),
+            ],
         ];
     }
 }
