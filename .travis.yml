@@ -11,6 +11,10 @@ env:
     - LARAVEL_VERSION=5.5.*
     - LARAVEL_VERSION=6.*.*
 
+cache:
+  directories:
+    - $HOME/.composer/cache
+
 matrix:
   fast_finish: true
 
