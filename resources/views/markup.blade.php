@@ -1,5 +1,5 @@
 <nav class="{{ $navClass ?: 'navbar navbar-default' }}" role="{{ $navRole ?: 'navigation' }}">
-    <ul class="nav flex-column {{ $ulClass }}">
+    <ul class="{{ $ulClass ?: 'sidebar-menu' }}">
         @foreach($menu->getData()->getGroups() as $group)
             @if($group->shouldShowGroupName())
                 <li class="group-name">

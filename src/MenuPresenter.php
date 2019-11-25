@@ -13,6 +13,7 @@ use Laralabs\Menu\Transformers\ArrayTransformer;
 class MenuPresenter
 {
     public const TO_COLLECTION = 'collection';
+    public const TO_MARKUP = 'markup';
     public const TO_BOOTSTRAP = 'bootstrap';
     public const TO_ARRAY = 'array';
     public const TO_JSON = 'json';
@@ -68,17 +69,35 @@ class MenuPresenter
         return json_encode($this->toArray($menu));
     }
 
-    public function toBootstrap(
+//    public function toBootstrap(
+//        ?string $menu = null,
+//        ?string $navClass = null,
+//        ?string $navRole = null,
+//        ?string $ulClass = null
+//    ): string {
+//        if ($menu === null) {
+//            throw new MenuNameRequiredException('A menu name is required for the toBootstrap() method');
+//        }
+//
+//        return View::make('laralabs-menu::bootstrap', [
+//            'menu'     => $this->toCollection($menu)->first(),
+//            'navClass' => $navClass,
+//            'navRole'  => $navRole,
+//            'ulClass'  => $ulClass,
+//        ])->render();
+//    }
+
+    public function toMarkup(
         ?string $menu = null,
         ?string $navClass = null,
         ?string $navRole = null,
         ?string $ulClass = null
     ): string {
         if ($menu === null) {
-            throw new MenuNameRequiredException('A menu name is required for the toBootstrap() method');
+            throw new MenuNameRequiredException('A menu name is required for the toMarkup() method');
         }
 
-        return View::make('laralabs-menu::bootstrap', [
+        return View::make('laralabs-menu::markup', [
             'menu'     => $this->toCollection($menu)->first(),
             'navClass' => $navClass,
             'navRole'  => $navRole,

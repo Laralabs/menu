@@ -19,9 +19,13 @@ if (!function_exists('get_menu')) {
             return Menu::toJson($name);
         }
 
-        if ($format === MenuPresenter::TO_BOOTSTRAP) {
-            return Menu::toBootstrap($name);
+        if ($format === MenuPresenter::TO_MARKUP) {
+            return Menu::toMarkup($name);
         }
+
+//        if ($format === MenuPresenter::TO_BOOTSTRAP) {
+//            return Menu::toBootstrap($name);
+//        }
 
         throw new MenuPresenterFormatterNotFound('The format: '.$format.' is not a valid presenter format');
     }
