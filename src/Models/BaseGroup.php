@@ -111,6 +111,7 @@ class BaseGroup implements Group
                 $item->name($name);
 
                 return $item;
-            });
+            }
+        );
     }
 }
