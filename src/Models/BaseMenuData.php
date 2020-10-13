@@ -60,6 +60,7 @@ class BaseMenuData implements MenuData
                 $group->name($name);
 
                 return $group;
-            });
+            }
+        );
     }
 }

@@ -56,7 +56,8 @@ class MenuServiceProvider extends ServiceProvider
     protected function registerConfig(): void
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/laralabs-menu.php', 'laralabs-menu'
+            __DIR__.'/../config/laralabs-menu.php',
+            'laralabs-menu'
         );
 
         $this->publishes([

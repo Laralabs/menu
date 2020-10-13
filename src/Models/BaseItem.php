@@ -172,6 +172,7 @@ class BaseItem implements Item
                 $subItem->name($name);
 
                 return $subItem;
-            });
+            }
+        );
     }
 }
