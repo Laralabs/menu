@@ -12,7 +12,8 @@ use Spatie\Snapshots\MatchesSnapshots;
 
 class MenuPresenterTest extends TestCase
 {
-    use ResolveMenus, MatchesSnapshots;
+    use ResolveMenus;
+    use MatchesSnapshots;
 
     /**
      * @var MenuManager
