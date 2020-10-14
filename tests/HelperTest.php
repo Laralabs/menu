@@ -83,7 +83,7 @@ class HelperTest extends TestCase
 
         $results = get_menu(MenuPresenter::TO_MARKUP, $this->menuManager->getResolvedMenus()->first()->name);
 
-        $this->assertMatchesHtmlSnapshot($results);
+        $this->assertMatchesJsonSnapshot(json_encode($results));
     }
 
     /** @test */
