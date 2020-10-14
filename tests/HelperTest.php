@@ -45,7 +45,7 @@ class HelperTest extends TestCase
         $results = get_menu(MenuPresenter::TO_ARRAY);
 
         $this->assertCount(1, $results);
-        $this->assertMatchesSnapshot($results);
+        $this->assertMatchesJsonSnapshot(json_encode($results));
     }
 
     /** @test */

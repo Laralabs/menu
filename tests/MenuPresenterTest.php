@@ -41,7 +41,7 @@ class MenuPresenterTest extends TestCase
         $this->assertCount(3, $this->menuManager->getResolvedMenus());
         $results = Menu::toArray();
         $this->assertCount(3, $results);
-        $this->assertMatchesSnapshot($results);
+        $this->assertMatchesJsonSnapshot(json_encode($results));
     }
 
     /** @test */
